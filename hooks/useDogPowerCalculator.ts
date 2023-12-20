@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { DogBreed } from "../interfaces";
+import { DogBreed } from "interfaces";
 
 const useDogPowerCalculator = (dogBreed : DogBreed) => {
   const [power, setPower] = useState(null);

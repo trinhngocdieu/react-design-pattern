@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { DogBreed } from "../../interfaces";
-import useQueryDogBreeds from "../../queries/useQueryDogBreeds";
+
 import ModalDogBreedInfo from "./ModalDogBreedInfo";
 import BreedDogItem from "./BreedDogItem";
+
+import { DogBreed } from "interfaces";
+import useQueryDogBreeds from "queries/useQueryDogBreeds";
 
 const ListBreedDog = () => {
   const {

@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { RANDOM_IMAGE_API } from '../constant/api';
+import { RANDOM_IMAGE_API } from 'constant/api';
 
 interface DogImageResponse {
   message: string;

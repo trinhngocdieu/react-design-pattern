@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
-import { DogBreed } from "../interfaces";
-import getRandomNumber from "../utils/random";
-import { LIST_BREED_API } from '../constant/api';
+import { DogBreed } from "interfaces";
+import getRandomNumber from "utils/random";
+import { LIST_BREED_API } from 'constant/api';
 
 interface DogBreedResponse {
   message: {

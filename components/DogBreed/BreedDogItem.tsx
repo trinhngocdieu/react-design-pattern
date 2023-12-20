@@ -1,4 +1,4 @@
-import { DogBreed } from "../../interfaces";
+import { DogBreed } from "interfaces";
 
 type BreedDogItemProps = {
   dogBreed: DogBreed;

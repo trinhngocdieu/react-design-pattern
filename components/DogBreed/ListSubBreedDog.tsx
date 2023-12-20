@@ -1,6 +1,3 @@
-import * as React from 'react';
-import { DogBreed } from "../../interfaces";
-
 type ListDogBreedProps = {
   items: string[],
 }
