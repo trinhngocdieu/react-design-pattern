@@ -10,7 +10,6 @@ interface DogBreedResponse {
 }
 
 const MAX_RANDOM_NUMBER = 100;
-
 const useQueryDogBreeds = () => {
   const fetchDogBreeds = async (): Promise<DogBreed[]> => {
     const response = await fetch(LIST_BREED_API);
