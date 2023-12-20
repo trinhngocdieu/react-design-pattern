@@ -1,7 +1,7 @@
-import { useQuery, UseQueryResult } from 'react-query';
+import { useQuery } from 'react-query';
 import { DogBreed } from "../interfaces";
 import getRandomNumber from "../utils/random";
-import { LIST_BREED_API } from "./apiList";
+import { LIST_BREED_API } from '../constant/api';
 
 interface DogBreedResponse {
   message: {
@@ -9,24 +9,32 @@ interface DogBreedResponse {
   };
 }
 
-const useQueryDogBreeds = (): UseQueryResult<DogBreed[], Error> => {
+const useQueryDogBreeds = () => {
+
   const fetchDogBreeds = async (): Promise<DogBreed[]> => {
     const response = await fetch(LIST_BREED_API);
     const data: DogBreedResponse = await response.json();
     const breedNames = Object.keys(data.message);
 
     return breedNames.map((breedName) => {
-      const subBreeds = data.message[breedName];
       return {
         breedName,
-        subBreeds,
+        subBreeds: data.message[breedName],
         avgHeight: getRandomNumber(100),
         avgWeight: getRandomNumber(100),
       };
     });
   };
 
-  return useQuery<DogBreed[], Error>('dogBreeds', fetchDogBreeds);
+  const {
+    data,
+    isLoading
+  } = useQuery<DogBreed[], Error>('dogBreeds', fetchDogBreeds);
+
+  return {
+    dogBreeds: data,
+    isLoadingDogBreeds: isLoading
+  };
 };
 
 export default useQueryDogBreeds;

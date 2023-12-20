@@ -19,14 +19,8 @@ const ModalBreedInfo = ({
   showDogInfoModal,
   setShowDogInfoModal
 }: DogBreedDetailModalProps) => {
-  const {
-    data: dogImage,
-    status
-  } = useQueryDogImage(dogBreed.breedName);
-
-  const {
-    power
-  } = useDogPowerCalculator(dogBreed);
+  const { dogImage } = useQueryDogImage(dogBreed.breedName);
+  const { power } = useDogPowerCalculator(dogBreed);
 
   const onCloseModal = () => {
     setShowDogInfoModal(false);

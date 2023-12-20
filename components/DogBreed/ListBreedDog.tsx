@@ -6,8 +6,8 @@ import BreedDogItem from "./BreedDogItem";
 
 const ListBreedDog = () => {
   const {
-    data,
-    status
+    dogBreeds,
+    isLoadingDogBreeds
   } = useQueryDogBreeds();
 
   const [
@@ -27,10 +27,10 @@ const ListBreedDog = () => {
 
   return (
     <>
-      {status === 'loading' ?
+      {isLoadingDogBreeds ?
         <div>Loading...</div> :
         <ul>
-          {data.map((item: DogBreed) => (
+          {dogBreeds.map((item: DogBreed) => (
             <BreedDogItem
               key={item.breedName}
               dogBreed={item}
