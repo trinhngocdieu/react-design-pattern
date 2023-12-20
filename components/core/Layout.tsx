@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { QueryClient, QueryClientProvider } from "react-query";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 type Props = {
   children?: ReactNode
