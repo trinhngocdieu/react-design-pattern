@@ -1,47 +1,32 @@
-# TypeScript Next.js example
+# Purpose
+This project demo how we separate different layer in the React Project. 
+Basically, we have 3 layers:
+- 
+- UI Layer: This layer is responsible for rendering the UI, and handle the user interaction
+- Logic Layer (hooks): This layer is responsible for handling the business logic, and communicate with the API
+  - userDogPowerCalculator: This hook is responsible for calculating the power of the dog, based on the height and weight
+- API Layer: This layer is responsible for communicating with the API, using React-Query
+  - userQueryDogBreeds: This hook is responsible for querying the dog breeds
+  - useQueryDogBreed: This hook is responsible for querying the dog breed by id
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Whenever we need to use any state, data, logic, we just add the hook to the UI component, and it will handle the rest.
+It will be similar to philosophy of React Hooks, we separate the logic into different layer, so it will be easier to maintain and test.
 
-## Deploy your own
+## Requirements
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+![img.png](statics%2Fimg.png)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+- API: https://dog.ceo/dog-api/documentation/
+- Use typescript
+- Use react-query for querying data
+- Use React Bootstrap https://react-bootstrap.netlify.app/
+- Not using store
+- Zero Style
+- We add some random data for each Dog Breed (level 1), `avgHeight` and `avgWeight`after loading data.
+  Based on avgHeight and avgWeight, we calculate the POWER index of that breed and show on modal?
+ ```POWER = avgHeight + avgWeight * 9;```
 
-## How to use it?
+## Run the project
+- Install dependencies: `yarn`
+- Run the project: `yarn dev`
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-```
-
-```bash
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-```bash
-pnpm create next-app --example with-typescript with-typescript-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
