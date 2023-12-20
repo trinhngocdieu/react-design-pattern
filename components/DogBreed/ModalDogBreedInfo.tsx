@@ -13,7 +13,7 @@ type DogBreedDetailModalProps = {
   setShowDogInfoModal: (show: boolean) => void;
 }
 
-const ModalBreedInfo = ({
+const ModalDogBreedInfo = ({
   dogBreed,
   setDogBreed,
   showDogInfoModal,
@@ -68,4 +68,4 @@ const ModalBreedInfo = ({
   );
 }
 
-export default ModalBreedInfo;
+export default ModalDogBreedInfo;

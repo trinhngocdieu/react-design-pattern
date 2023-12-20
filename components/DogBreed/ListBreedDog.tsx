@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { DogBreed } from "../../interfaces";
 import useQueryDogBreeds from "../../queries/useQueryDogBreeds";
-import ModalBreedInfo from "./ModalBreedInfo";
+import ModalDogBreedInfo from "./ModalDogBreedInfo";
 import BreedDogItem from "./BreedDogItem";
 
 const ListBreedDog = () => {
@@ -40,7 +40,7 @@ const ListBreedDog = () => {
         </ul>
       }
       {showDogInfoModal &&
-        <ModalBreedInfo
+        <ModalDogBreedInfo
           dogBreed={selectedBreed}
           setDogBreed={setSelectedBreed}
           showDogInfoModal={showDogInfoModal}
