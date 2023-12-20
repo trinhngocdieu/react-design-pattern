@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Image from 'react-bootstrap/Image';
-
 import { ListSubBreedDog } from "./ListSubBreedDog";
 import { DogBreed } from "interfaces";
 import useQueryDogImage from "queries/useQueryDogImage";

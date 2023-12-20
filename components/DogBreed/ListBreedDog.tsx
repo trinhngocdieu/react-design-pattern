@@ -1,8 +1,6 @@
 import { useState } from 'react';
-
 import ModalDogBreedInfo from "./ModalDogBreedInfo";
 import BreedDogItem from "./BreedDogItem";
-
 import { DogBreed } from "interfaces";
 import useQueryDogBreeds from "queries/useQueryDogBreeds";
 
