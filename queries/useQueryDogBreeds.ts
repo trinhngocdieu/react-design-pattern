@@ -9,8 +9,9 @@ interface DogBreedResponse {
   };
 }
 
-const useQueryDogBreeds = () => {
+const MAX_RANDOM_NUMBER = 100;
 
+const useQueryDogBreeds = () => {
   const fetchDogBreeds = async (): Promise<DogBreed[]> => {
     const response = await fetch(LIST_BREED_API);
     const data: DogBreedResponse = await response.json();
@@ -20,8 +21,8 @@ const useQueryDogBreeds = () => {
       return {
         breedName,
         subBreeds: data.message[breedName],
-        avgHeight: getRandomNumber(100),
-        avgWeight: getRandomNumber(100),
+        avgHeight: getRandomNumber(MAX_RANDOM_NUMBER),
+        avgWeight: getRandomNumber(MAX_RANDOM_NUMBER),
       };
     });
   };
