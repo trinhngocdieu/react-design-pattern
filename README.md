@@ -20,14 +20,18 @@ It will be similar to philosophy of React Hooks, we separate the logic into diff
 
 ## Benefits
 
-Design for the scalability, and easy to **Scale** the project in the future, here we look at the **Long Term** benefit, not just the short term benefit.
-Put everything in one place is more suitable for a **Demo and Prototype project**, which we want to do it **Fast**, as it will be easy to get messy along the time, and when we need to separate the logic, it will be hard to do that.
-As the person who writes the code, and the person who does refactor the code is different as well as the constraint between many parts in one component.
-Organize the code unit in its layers from beginning, will make it easier to **Scale** the project in the future, as we can easily add more logic, more data, more UI, without affecting the other layers.
+Design for the scalability, and ease to **Scale** the project in the future, here we look at the **Long Term** benefit, not just the short term benefit.
+Putting everything in one place is more suitable for a **Demo and Prototype project**, which we want to do something **Fast**.
 
-- **Reusability**: useDogPower, useQueryDogs, useQueryDogImage can be reused in many components with similar logic 
+Because it will be **easy to get messy** along the time, once we need to separate the logic, it will be hard to do that.
+The person who writes the code, and the person who refactors the code are different as well as the **constraint** between many parts (logic/data) in one component.
+
+Organize the code unit in its layers from the beginning, will make it easier to **Scale** the project in the future, 
+as we can easily add more logic, more data, and more UI, without affecting the other layers.
+
+- **Reusability**: `useDogPower`, `useQueryDogs`, `useQueryDogImage` can be reused in many components with similar logic 
 - **Testability**: The data fetching logic can be tested independently of the component, making unit testing more straightforward.
-- **Readability**: The main component is focused on rendering and managing its own state, while the data fetching logic is encapsulated in a separate module, improving code readability.
+- **Readability**: The main component is focused on rendering and managing its state, while the data fetching logic is encapsulated in a separate module, improving code readability.
 - **Separation of Concerns**: Making your codebase more modular and easier to maintain, React UI component only cares about UI and User Interaction. 
 
 Basically, this makes our code base more **Modular**, and **Maintainable**.
