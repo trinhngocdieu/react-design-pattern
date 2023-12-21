@@ -19,15 +19,18 @@ Whenever we need to use any state, data, logic, we just add the hook to the UI c
 It will be similar to philosophy of React Hooks, we separate the logic into different layer, so it will be easier to maintain and test.
 
 ## Benefits
-- Apply the **Philosophy of the Hooks** from React 16, which React already provides us some hooks like useState, useEffect, useMemo.
-- **Decoupling** between Data layer, Logic Layer and View layer
-- Module and easy to **Maintain/Test** each layer separately
-- React is a UI library, **React Component should only care about the UI**, not care about how the Data come from 
-- Design for the scalability, and easy to **Scale** the project in the future, we look at the **Long Term** benefit, not just the short term benefit.
-- Put everything in one place is more suitable for a **Demo and Prototype project**, which we want to do it **Fast**, as it will be easy to get messy along the time, and when we need to separate the logic, it will be hard to do that. 
-Because the person who write the code, and the person who do refactor the code is different as well as the constraint between many parts in one component.
-- Organize the code unit in its layers from beginning, will make it easier to **Scale** the project in the future, as we can easily add more logic, more data, more UI, without affecting the other layers.
 
+Design for the scalability, and easy to **Scale** the project in the future, here we look at the **Long Term** benefit, not just the short term benefit.
+Put everything in one place is more suitable for a **Demo and Prototype project**, which we want to do it **Fast**, as it will be easy to get messy along the time, and when we need to separate the logic, it will be hard to do that.
+As the person who writes the code, and the person who does refactor the code is different as well as the constraint between many parts in one component.
+Organize the code unit in its layers from beginning, will make it easier to **Scale** the project in the future, as we can easily add more logic, more data, more UI, without affecting the other layers.
+
+- **Reusability**: useDogPower, useQueryDogs, useQueryDogImage can be reused in many components with similar logic 
+- **Testability**: The data fetching logic can be tested independently of the component, making unit testing more straightforward.
+- **Readability**: The main component is focused on rendering and managing its own state, while the data fetching logic is encapsulated in a separate module, improving code readability.
+- **Separation of Concerns**: Making your codebase more modular and easier to maintain, React UI component only cares about UI and User Interaction. 
+
+Basically, this makes our code base more **Modular**, and **Maintainable**.
 ## Requirements
 
 ![img.png](statics%2Fimg.png)
