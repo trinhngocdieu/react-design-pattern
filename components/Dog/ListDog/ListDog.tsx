@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import ModalDogInfo from "./ModalDogInfo";
+import ModalDogInfo from "../ModalDog/ModalDogInfo";
 import DogItem from "./DogItem";
 import { Dog } from "interfaces";
-import useQueryDogs from "queries/useQueryDogs";
+import useQueryDogs from "queries/dog/useQueryDogs";
 
 const ListDog = () => {
   const {

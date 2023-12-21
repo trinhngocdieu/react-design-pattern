@@ -3,8 +3,8 @@ import Modal from 'react-bootstrap/Modal';
 import Image from 'react-bootstrap/Image';
 import ListSubDog from "./ListSubDog";
 import { Dog } from "interfaces";
-import useQueryDogImage from "queries/useQueryDogImage";
-import useDogPower from "hooks/useDogPower";
+import useQueryDogImage from "queries/dog/useQueryDogImage";
+import useDogPower from "hooks/dog/useDogPower";
 
 type ModalDogInfoProps = {
   dog: Dog;
