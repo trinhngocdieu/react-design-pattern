@@ -5,7 +5,7 @@ import { LIST_BREED_API } from 'constant/api';
 
 interface DogResponse {
   message: {
-    [breed: string]: string[];
+    [dogName: string]: string[];
   };
 }
 
@@ -14,12 +14,12 @@ const useQueryDogs = () => {
   const fetchDogs = async (): Promise<Dog[]> => {
     const response = await fetch(LIST_BREED_API);
     const data: DogResponse = await response.json();
-    const breedNames = Object.keys(data.message);
+    const dogNames = Object.keys(data.message);
 
-    return breedNames.map((breedName) => {
+    return dogNames.map((dogName) => {
       return {
-        name: breedName,
-        subDog: data.message[breedName],
+        name: dogName,
+        subDog: data.message[dogName],
         avgHeight: getRandomNumber(MAX_RANDOM_NUMBER),
         avgWeight: getRandomNumber(MAX_RANDOM_NUMBER),
       };
