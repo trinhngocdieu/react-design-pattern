@@ -1,6 +1,6 @@
 
 import Layout from "../components/core/Layout";
-import ListDog from "../components/DogBreed/ListDog";
+import ListDog from "../components/Dog/ListDog";
 
 const IndexPage = () => {
   return (
