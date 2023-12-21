@@ -2,6 +2,8 @@
 This project demo how we separate different layer in the React Project. 
 Basically, we have 3 layers:
 
+![diagram.png](statics%2Fdiagram.png)
+
 - UI Layer: This layer is responsible for rendering the UI, and handle the user interaction
   - [ListDog](https://github.com/trinhngocdieu/react-design-pattern/blob/main/components/Dog/ListDog/ListDog.tsx): This component is responsible for rendering the list of dogs
     - [DogItem](https://github.com/trinhngocdieu/react-design-pattern/blob/main/components/Dog/ListDog/DogItem.tsx): This component is responsible for rendering the item of the dog
