@@ -17,6 +17,7 @@ Whenever we need to use any state, data, logic, we just add the hook to the UI c
 It will be similar to philosophy of React Hooks, we separate the logic into different layer, so it will be easier to maintain and test.
 
 ## Benefits
+- Design for the scalability, and easy to **Scale** the project in the future, we look at the **Long Term** benefit, not just the short term benefit.
 - Apply the **Philosophy of the Hooks** from React 16, which React already provides us some hooks like useState, useEffect, useMemo.
 - **Decoupling** between Data layer, Logic Layer and View layer
 - Module and easy to **Maintain/Test** each layer separately
