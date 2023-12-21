@@ -1,9 +1,9 @@
 import { useState, useMemo } from 'react';
-import { DogBreed } from "interfaces";
+import { Dog } from "interfaces";
 
-const useDogPowerCalculator = (dogBreed : DogBreed) => {
+const useDogPower = (dog : Dog) => {
   const [power, setPower] = useState(null);
-  const { avgHeight, avgWeight } = dogBreed;
+  const { avgHeight, avgWeight } = dog;
 
   useMemo(() => {
     const calculatePower = () => {
@@ -17,4 +17,4 @@ const useDogPowerCalculator = (dogBreed : DogBreed) => {
   return { power };
 };
 
-export default useDogPowerCalculator;
+export default useDogPower;

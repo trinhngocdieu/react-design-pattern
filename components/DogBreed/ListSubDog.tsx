@@ -1,7 +1,7 @@
-type ListDogBreedProps = {
+type ListSubDogProps = {
   items: string[],
 }
-const ListSubBreedDog = ({ items }: ListDogBreedProps) => {
+const ListSubDog = ({ items }: ListSubDogProps) => {
   return (
     <ul>
       {items.map((item) => (
@@ -13,4 +13,4 @@ const ListSubBreedDog = ({ items }: ListDogBreedProps) => {
   );
 }
 
-export default ListSubBreedDog;
+export default ListSubDog;
