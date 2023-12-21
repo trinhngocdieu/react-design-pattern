@@ -17,10 +17,11 @@ Whenever we need to use any state, data, logic, we just add the hook to the UI c
 It will be similar to philosophy of React Hooks, we separate the logic into different layer, so it will be easier to maintain and test.
 
 ## Benefits
-- Apply the philosophy of the hooks, which React already provides us some hooks like useState, useEffect, useMemo.
-- Decoupling between Data layer and View layer
-- Module and easy to Maintain/Test each layer
-- Component only care about the data it needs, not care about how to get the data 
+- Apply the **Philosophy of the Hooks** from React 16, which React already provides us some hooks like useState, useEffect, useMemo.
+- **Decoupling** between Data layer, Logic Layer and View layer
+- Module and easy to **Maintain/Test** each layer separately
+- React is a UI library, **React Component should only care about the UI**, not care about how the Data come from 
+- If we put everything in one place, it will be easy to get messy along the time, and when we need to separate the logic, it will be hard to do that. Because the person who write the code, and the person who do refactor the code is different.
 
 ## Requirements
 
