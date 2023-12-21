@@ -1,12 +1,14 @@
 # Purpose
 This project demo how we separate different layer in the React Project. 
 Basically, we have 3 layers:
-- 
+
 - UI Layer: This layer is responsible for rendering the UI, and handle the user interaction
-  - ListDog: This component is responsible for rendering the list of dogs
-  - DogModal: This component is responsible for rendering the modal of the dog
+  - [ListDog](https://github.com/trinhngocdieu/react-design-pattern/blob/main/components/Dog/ListDog/ListDog.tsx): This component is responsible for rendering the list of dogs
+    - [DogItem](https://github.com/trinhngocdieu/react-design-pattern/blob/main/components/Dog/ListDog/DogItem.tsx): This component is responsible for rendering the item of the dog
+  - [ModalDog](https://github.com/trinhngocdieu/react-design-pattern/blob/main/components/Dog/ModalDog/ModalDog.tsx): This component is responsible for rendering the modal of the dog
+    - [ListSubDog](https://github.com/trinhngocdieu/react-design-pattern/blob/main/components/Dog/ModalDog/ListSubDog.tsx): This component is responsible for rendering the sub dogs of a dog 
 - Logic Layer (hooks): This layer is responsible for handling the business logic, and communicate with the API
-  - [userDogPowerCalculator](https://github.com/trinhngocdieu/react-design-pattern/blob/main/hooks/dog/useDogPower.ts#L3): This hook is responsible for calculating the power of the dog, based on the height and weight
+  - [userDogPower](https://github.com/trinhngocdieu/react-design-pattern/blob/main/hooks/dog/useDogPower.ts#L3): This hook is responsible for calculating the power of the dog, based on the height and weight
 - API Layer: This layer is responsible for communicating with the API, using React-Query
   - [userQueryDogs](https://github.com/trinhngocdieu/react-design-pattern/blob/main/queries/dog/useQueryDogs.ts): This hook is responsible for querying the dog breeds
   - [useQueryDogImage](https://github.com/trinhngocdieu/react-design-pattern/blob/main/queries/dog/useQueryDogImage.ts): This hook is responsible for querying the dog image

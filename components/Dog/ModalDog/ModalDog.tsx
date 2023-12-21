@@ -6,19 +6,19 @@ import { Dog } from "interfaces";
 import useQueryDogImage from "queries/dog/useQueryDogImage";
 import useDogPower from "hooks/dog/useDogPower";
 
-type ModalDogInfoProps = {
+type ModalDogProps = {
   dog: Dog;
   setDog: (dog: Dog) => void;
   showDogModal: boolean;
   setShowDogModal: (show: boolean) => void;
 }
 
-const ModalDogInfo = ({
+const ModalDog = ({
   dog,
   setDog,
   showDogModal,
   setShowDogModal
-}: ModalDogInfoProps) => {
+}: ModalDogProps) => {
   const { dogImage } = useQueryDogImage(dog.name);
   const { power } = useDogPower(dog);
 
@@ -68,4 +68,4 @@ const ModalDogInfo = ({
   );
 }
 
-export default ModalDogInfo;
+export default ModalDog;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ModalDogInfo from "../ModalDog/ModalDogInfo";
+import ModalDog from "../ModalDog/ModalDog";
 import DogItem from "./DogItem";
 import { Dog } from "interfaces";
 import useQueryDogs from "queries/dog/useQueryDogs";
@@ -40,7 +40,7 @@ const ListDog = () => {
         </ul>
       }
       {showDogModal &&
-        <ModalDogInfo
+        <ModalDog
           dog={selectedDog}
           setDog={setSelectedDog}
           showDogModal={showDogModal}
