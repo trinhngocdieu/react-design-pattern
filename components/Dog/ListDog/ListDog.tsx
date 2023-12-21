@@ -13,7 +13,7 @@ const ListDog = () => {
   const [
     selectedDog,
     setSelectedDog
-  ] = useState<Dog>(null);
+  ] = useState<Dog | null>(null);
 
   const [
     showDogModal,
