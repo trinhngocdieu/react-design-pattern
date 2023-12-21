@@ -18,9 +18,9 @@ It will be similar to philosophy of React Hooks, we separate the logic into diff
 
 ## Benefits
 - Apply the philosophy of the hooks, which React already provides us some hooks like useState, useEffect, useMemo.
-- Decoupling between data layer and view layer
-- Module and easy to maintain/test
-- Component only care about the data and how we render the data, don't care about how/where data comes from.
+- Decoupling between Data layer and View layer
+- Module and easy to Maintain/Test each layer
+- Component only care about the data it needs, not care about how to get the data 
 
 ## Requirements
 
