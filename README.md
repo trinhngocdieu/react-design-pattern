@@ -32,7 +32,7 @@ as we can easily add more logic, more data, and more UI, without affecting the o
 - **Reusability**: `useDogPower`, `useQueryDogs`, `useQueryDogImage` can be reused in many components with similar logic 
 - **Testability**: The data fetching logic can be tested independently of the component, making unit testing more straightforward.
 - **Readability**: The main component is focused on rendering and managing its state, while the data fetching logic is encapsulated in a separate module, improving code readability.
-- **Separation of Concerns**: Making your codebase more modular and easier to maintain, React UI component only cares about UI and User Interaction. 
+- **Separation of Concerns**: Making the codebase more modular and easier to maintain, React UI component only cares about UI and User Interaction. 
 
 Basically, this makes our code base more **Modular**, and **Maintainable**.
 ## Requirements
