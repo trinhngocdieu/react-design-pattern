@@ -23,7 +23,7 @@ It will be similar to philosophy of React Hooks, we separate the logic into diff
 - React is a UI library, **React Component should only care about the UI**, not care about how the Data come from 
 - Design for the scalability, and easy to **Scale** the project in the future, we look at the **Long Term** benefit, not just the short term benefit.
 - Put everything in one place is more suitable for a **Demo and Prototype project**, which we want to do it **Fast**, as it will be easy to get messy along the time, and when we need to separate the logic, it will be hard to do that. 
-Because the person who write the code, and the person who do refactor the code is different.
+Because the person who write the code, and the person who do refactor the code is different as well as the constraint between many parts in one component.
 - Organize the code unit in its layers from beginning, will make it easier to **Scale** the project in the future, as we can easily add more logic, more data, more UI, without affecting the other layers.
 
 ## Requirements
